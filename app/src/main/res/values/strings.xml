@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AlertDialogTest</string>
+    <string name="button_text">我弹</string>
+    <string name="input_hint">请随便输入</string>
+</resources>
