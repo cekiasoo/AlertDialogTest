@@ -1,4 +1,4 @@
-# Android 按 AlertDialog 的确定按钮对话框不关闭的方法
+# Android 点击 AlertDialog 的确定按钮对话框不关闭的方法
 ## 一、问题描述
 > 最近在做项目需要在弹出 含 EditText 让用户输入的对话框，在按确定按钮时需要对输入的内容进行校验，但出现的问题是一按确定按钮就对话框就关闭，现在的问题是要让对话框在按确定按钮时对 EditText 的内容进行校验，如果校验不通过就不关闭，校验通过才关闭。
 
@@ -44,13 +44,13 @@ protected void onCreate(Bundle savedInstanceState) {
 
 > 按照上面的这样做是没办法阻止 Dialog 关闭的
 
-![运行结果截图](2017-1-22230942.gif)
+![image](https://github.com/cekiasoo/AlertDialogTest/raw/master/screenshots/1.gif)<br/>
 
 ## 二、源码分析
 > 于是就去看了下源码，
 先点进 AlertDialog.Builder 的 setPositiveButton 方法去看看，
 
-![运行结果截图](搜狗截图20180403130100.png)
+![image](https://github.com/cekiasoo/AlertDialogTest/raw/master/screenshots/1.png)<br/>
 
 > 可以看到传进去的参数是赋给一个叫 P 的引用的
 
@@ -94,7 +94,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 > 再来看看 AlertDialog.Builder 的 create 方法
 
-![运行结果截图](搜狗截图20180403131431.png)
+![image](https://github.com/cekiasoo/AlertDialogTest/raw/master/screenshots/2.png)<br/>
 
 > 点击进去，
 
@@ -412,4 +412,4 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-![运行结果截图](2017-1-22230941.gif)
+![image](https://github.com/cekiasoo/AlertDialogTest/raw/master/screenshots/2.gif)<br/>
